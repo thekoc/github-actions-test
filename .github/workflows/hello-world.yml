@@ -1,0 +1,10 @@
+name: GitHub Actions Demo
+run-name: Hello world from ${{ github.actor }}
+on: [push]
+jobs:
+  Hello-World-Action:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world on OS ${{ runner.os }}"
+      - run: echo "Triggered by ${{ github.event_name }} event."
+      - run: echo "Exit with status ${{ job.status }}."
